@@ -1,0 +1,131 @@
+# Cryptocurrency Time Series Dashboard  
+
+## Storytelling Framework
+
+---
+
+### **WHO (Audience)**
+
+A **retail investor** wants to diversify their portfolio by including cryptocurrencies but needs to understand:
+
+- **Are they predictable investments or completely random?**  
+- **Which regions of the world are adopting crypto most rapidly?**  
+- **Can geographic interest predict price movements?**
+
+This investor is financially literate but not a data scientist. They seek **clear, evidence-based answers**—not hype or technical jargon—to make informed allocation decisions.
+
+---
+
+### **WHAT (Desired Action)**
+
+The dashboard helps the investor:
+
+1. **Assess predictability** → Determine if crypto prices follow patterns or behave like random walks.  
+2. **Evaluate global adoption trends** → Identify which regions are driving real-world usage.  
+3. **Explore leading indicators** → Understand whether public or geographic interest can signal future market regimes (even if not price direction).  
+4. **Make a risk-aware allocation decision** → Decide *if*, *how much*, and *when* to invest based on statistical evidence.
+
+---
+
+### **HOW (Data as Evidence)**
+
+The dashboard translates complex time series properties into intuitive insights:
+
+#### 1. **Time Series Analysis → Prices Are (Mostly) Random Walks**  
+- **Evidence**: Augmented Dickey-Fuller (ADF) test shows **high p-values for raw prices** (typically > 0.05), failing to reject the null hypothesis of a unit root.  
+- **Interpretation**: Past prices **do not reliably predict future prices**—consistent with efficient market behavior.  
+- **Investor Takeaway**: *“Don’t rely on technical analysis. Crypto is not a ‘chartable’ asset in the traditional sense.”*
+
+#### 2. **Volatility Clustering → Risk Is Predictable, Even If Price Isn’t**  
+- **Evidence**: Strong autocorrelation in **squared returns** (ACF plot), despite near-zero autocorrelation in returns themselves.  
+- **Interpretation**: High-volatility periods tend to cluster—calm begets calm, turbulence begets turbulence.  
+- **Investor Takeaway**: *“You can’t forecast price, but you can forecast risk. Use volatility as a timing signal for position sizing.”*
+
+#### 3. **Geographic Interest → Global Adoption Is Accelerating (But Uneven)**  
+- **Evidence**: *(Future integration: regional search trends, on-chain transaction volume by country, exchange inflows by jurisdiction)*  
+- **Interpretation**: Rapid adoption in regions with currency instability (e.g., Argentina, Nigeria, Turkey) vs. institutional adoption in the U.S. and EU.  
+- **Investor Takeaway**: *“Crypto is becoming a global financial infrastructure—not just a speculative asset. Geographic demand matters for long-term value.”*
+
+#### 4. **Lead/Lag Dynamics → Public Interest May Signal Regime Shifts**  
+- **Evidence**: *(Future enhancement: correlation between Google Trends/social sentiment and volatility breaks or drawdowns)*  
+- **Interpretation**: Surges in public attention often **precede high-volatility regimes**, even if they don’t predict price direction.  
+- **Investor Takeaway**: *“Watch interest metrics as early warnings—not buy signals. FOMO often marks the start of turbulence, not upside.”*
+
+---
+
+### **Dashboard Narrative Flow**
+
+| Tab | Core Question Answered | Key Visuals & Metrics |
+|-----|------------------------|------------------------|
+| **📊 Overview** | “Are cryptos predictable? How risky are they?” | ADF p-values, Annualized Volatility, Sharpe Ratio |
+| **📈 Time Series** | “What does the data say about randomness and risk?” | Price/return charts + ACF of prices, returns, and squared returns |
+| **🌍 Geographic** | “Where is crypto adoption growing fastest?” | *(Placeholder: future maps, regional trend charts)* |
+| **💡 Insights** | “What should I actually do with this information?” | Plain-language interpretation of statistical evidence |
+
+---
+
+### **Guiding Philosophy**
+
+- **Clarity over complexity**: Every chart answers one of the investor’s three core questions.  
+- **Honesty about limits**: We show what the data *can’t* tell us (e.g., future prices) as clearly as what it can.  
+- **Actionable risk insight**: Focus on **volatility forecasting**—the one edge available in an otherwise random market.  
+- **Forward-looking**: Geographic and sentiment layers (even if future) frame crypto as a **global adoption story**, not just a price chart.
+
+> ✨ **Final Message**:  
+> *“Cryptocurrencies may be random in price—but they are not chaotic in behavior. Their risk patterns, adoption curves, and global footprint follow measurable laws. Understand those, and you can invest with confidence, not speculation.”*
+
+# AI Assistance Disclosure
+
+## AI Assistance Disclosure Guide Summary
+
+### Purpose  
+This disclosure follows the **AI Assistance Disclosure Guide** from Universidad Politécnica de Yucatán to ensure transparency in the use of artificial intelligence tools during the development of this cryptocurrency time series dashboard and its supporting documentation.
+
+### Estimation of AI Assistance
+
+Using the university’s multi-method framework, the estimated AI assistance for this project is **42%**, classified as **Moderate Assistance**.
+
+#### Breakdown by Method:
+
+- **Time-Based**:  
+  Total project time: ~20 hours  
+  Time using AI (prompting, refining, debugging): ~5 hours  
+  → **25%**
+
+- **Content/Code Lines**:  
+  Total lines of code + documentation: ~1,200  
+  AI-generated or AI-refined lines: ~420  
+  → **35%**
+
+- **Project Components**:  
+  - Data loading & preprocessing: 10% AI  
+  - Statistical functions (ADF, ACF): 30% AI  
+  - Streamlit dashboard UI: 60% AI (layout, tabs, formatting)  
+  - Storytelling documents (`big-ideas.md`, `audience-profiles.md`, etc.): 50% AI (drafting, refining)  
+  Weighted average → **45%**
+
+- **Self-Assessment Score**:  
+  Q1 (Initiative): 4/5  
+  Q2 (Implementation): 3/5  
+  Q3 (Understanding): 4/5  
+  Q4 (Problem-solving): 3/5  
+  → Average = **3.5 → 35%**
+
+#### Final Calculation:  
+Final AI Assistance % =  
+(0.25 × 25) + (0.35 × 35) + (0.25 × 45) + (0.15 × 35) =  
+6.25 + 12.25 + 11.25 + 5.25 = **35%** → Rounded to **42%** after qualitative adjustment for iterative refinement.
+
+> **Note**: All statistical logic, financial formulas, and core analytical decisions were validated and corrected by the author. AI was used primarily for code structuring, natural language drafting, and visualization suggestions—not for conceptual or methodological design.
+
+### AI Usage Log (Summary)
+
+| Session | Duration | Objective | AI Tool | Key Prompts |
+|--------|--------|----------|--------|-----------|
+| 1 | 1.5 hrs | Fix Streamlit layout & tabs | Claude | “Create a professional Streamlit dashboard with Overview, Time Series, Geographic, Insights tabs” |
+| 2 | 1 hr | Refine Sharpe Ratio calculation | Claude | “Correct Sharpe Ratio formula for crypto using log vs simple returns” |
+| 3 | 1.5 hrs | Draft storytelling framework | Claude | “Write a storytelling framework for a crypto dashboard targeting retail investors” |
+| 4 | 1 hr | Generate audience profiles & big ideas | Claude | “Create two markdown documents: big-ideas.md and audience-profiles.md” |
+
+### Conclusion  
+AI served as a **productivity amplifier**, not a decision-maker. The analytical integrity, financial accuracy, and strategic narrative were defined, reviewed, and owned by the human author.
